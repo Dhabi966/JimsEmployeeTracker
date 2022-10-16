@@ -13,12 +13,10 @@ const db = mysql.createConnection(
   {
     host: "localhost",
     // Hiding user, password and db name that is inputted by the user using the following:
-    //    // user: process.env.DB_USER,
-    //     //password: process.env.DB_PASSWORD,
-    //     database: process.env.DB_NAME,
-    user: "root",
-    password: "Dhabi@123",
-    database: "company_db",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  
   },
   console.log("Connected to the employee database")
 );
@@ -84,8 +82,8 @@ function displayOptions() {
           exit();
           break;
       }
-    });
-  //.catch((error) => console.log(response));
+    })
+    .catch((err) => console.log(err));
 }
 
 // Displays the formatted table containing the department name and ids
@@ -417,12 +415,8 @@ function updateEmployeeRole() {
     }
   });
 }
-          // Exits the user prompts and ends the connection
-          function exit() {
-            console.log("Thank you!");
-            db.end();
-          }
-        
-    
-  
-
+// Exits the user prompts and ends the connection
+function exit() {
+  console.log("Thank you!");
+  db.end();
+}
