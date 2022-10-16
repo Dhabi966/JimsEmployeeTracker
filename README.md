@@ -32,7 +32,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ## Database Schema Image
 ![image](https://user-images.githubusercontent.com/108851005/196018426-881c6424-8ee7-47cf-830e-2a7e9ec4abde.png)
 
-## Walkthrough Video
-
+## Walkthrough Video Link
+https://drive.google.com/file/d/1BnZddN9ghzL-gQmF4L4PGCeUTGDaLAZ9/view
 
 Github Repo: https://github.com/Dhabi966/jimsemployeetracker
