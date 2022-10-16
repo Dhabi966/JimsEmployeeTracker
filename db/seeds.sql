@@ -20,6 +20,6 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id)
            ("Chris", "Tucker", 3, NULL),
            ("Kevin", "Bacon", 4, 3),
            ("Lisa", "Simpson", 5, NULL),
-           ("James", "Brown", 6, 5),w
+           ("James", "Brown", 6, 5),
            ("Homer", "Simpson", 7, NULL),
            ("Tim", "Allen", 8, 7);

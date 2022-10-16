@@ -12,12 +12,13 @@ const employees = [];
 const db = mysql.createConnection(
   {
     host: "localhost",
-//    // user: process.env.DB_USER,
-//     //password: process.env.DB_PASSWORD,
-//     database: process.env.DB_NAME,
-user: "root", 
-password: "Dhabi@123",
-database: "company_db"
+    // Hiding user, password and db name that is inputted by the user using the following:
+    //    // user: process.env.DB_USER,
+    //     //password: process.env.DB_PASSWORD,
+    //     database: process.env.DB_NAME,
+    user: "root",
+    password: "Dhabi@123",
+    database: "company_db",
   },
   console.log("Connected to the employee database")
 );
@@ -75,12 +76,16 @@ function displayOptions() {
           updateEmployeeRole();
           break;
 
+        case "Update an employee role":
+          updateEmployeeRole();
+          break;
+
         case "Exit":
           exit();
           break;
       }
     });
-    //.catch((error) => console.log(response));
+  //.catch((error) => console.log(response));
 }
 
 // Displays the formatted table containing the department name and ids
@@ -98,8 +103,7 @@ function viewAllDepartments() {
 
 // Displays the information like id, job title, department and salary of all roles
 function viewAllRoles() {
-  const sql = 
-    `SELECT role.id, 
+  const sql = `SELECT role.id, 
     title, 
     department.name AS department, 
     salary FROM role 
@@ -413,9 +417,12 @@ function updateEmployeeRole() {
     }
   });
 }
+          // Exits the user prompts and ends the connection
+          function exit() {
+            console.log("Thank you!");
+            db.end();
+          }
+        
+    
+  
 
-// Exits the user prompts and ends the connection
-function exit() {
-  console.log("Thank you!");
-  db.end();
-}
