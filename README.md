@@ -31,7 +31,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ```
 ## Database Schema Image
 
-## Demonstration Video
+## Walkthrough Video
 
 
 Github Repo: https://github.com/Dhabi966/jimsemployeetracker
