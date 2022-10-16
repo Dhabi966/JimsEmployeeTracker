@@ -12,9 +12,13 @@ const employees = [];
 const db = mysql.createConnection(
   {
     host: "localhost",
-    // Hiding password using dotenv
-    password: process.env.DB_PASSWORD,
+    // Tried hiding password using dotenv, but could not get it to work
+    //password: process.env.DB_PASSWORD,
+    user: "root",
+    password: "Dhabi@123",
     database: "company_db",
+    
+
   },
   console.log("Connected to the employee database")
 );
