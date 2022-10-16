@@ -30,6 +30,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 ```
 ## Database Schema Image
+![image](https://user-images.githubusercontent.com/108851005/196018426-881c6424-8ee7-47cf-830e-2a7e9ec4abde.png)
 
 ## Demonstration Video
 
